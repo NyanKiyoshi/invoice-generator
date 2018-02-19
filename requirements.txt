@@ -1,3 +1,4 @@
+pip
+babel
 weasyprint
-pybars3
-pyyaml
+django
