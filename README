@@ -1,0 +1,4 @@
+invoice-generator
+======
+
+Generate invoices using python, weasyprint and django.

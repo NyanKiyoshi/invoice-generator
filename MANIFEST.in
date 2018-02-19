@@ -1,0 +1,1 @@
+recursive-include invoice_generator *.html *.css *.svg *.mo
