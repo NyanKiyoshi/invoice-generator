@@ -105,7 +105,7 @@ class Invoice(object):
 
     def __init__(self, order_data: Order,
                  vendor: Vendor, billing_address: Address,
-                 *items: OrderItem):
+                 items: OrderItem):
         self.order = order_data
         self.vendor = vendor
         self.billing_address = billing_address

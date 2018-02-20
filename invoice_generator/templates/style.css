@@ -12,14 +12,14 @@ html {
     white-space: nowrap;
 }
 
-.gross-total {
+.bold {
     font-weight: bold;
 }
 
 /**
  * Address table
  */
- .adressTable tr:nth-child(1) td {
+ .addressTable tr:nth-child(1) td {
      border-bottom: 1px solid black;
  }
 
