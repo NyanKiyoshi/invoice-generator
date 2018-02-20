@@ -11,10 +11,7 @@ BASE_PATH = os.path.join(os.path.dirname(__file__))
 BASE_URL = os.path.join(BASE_PATH, 'templates')
 
 
-def generate_pdf(
-        currency: str, invoice: Invoice,
-        template=None, static_path=BASE_URL):
-
+def generate_html(currency: str, invoice: Invoice, template):
     if not template:
         template = get_template('index.html')
 
@@ -28,6 +25,14 @@ def generate_pdf(
     )
 
     html_text = template.render(ctx)
-    weasytemplate = HTML(string=html_text, base_url=static_path)
+    return html_text
 
-    return weasytemplate
+
+def generate_pdf_from(html, static_path):
+    pdf = HTML(string=html, base_url=static_path)
+    return pdf
+
+
+def generate_pdf(currency: str, invoice: Invoice, template=None, static_path=BASE_URL):
+    html = generate_html(currency, invoice, template)
+    return generate_pdf_from(html, static_path)
