@@ -1,0 +1,19 @@
+language: python
+cache: pip
+sudo: false
+python:
+  - "3.6"
+  - "3.5"
+  - "nightly"
+  - "pypy3"
+install:
+  - pip install codecov coverage
+matrix:
+  allow_failures:
+    - python: "nightly"
+    - python: "pypy3"
+script:
+  - pip3 install -e ".[testing]"
+  - coverage run -m unittest discover -s tests
+after_success:
+  - codecov
