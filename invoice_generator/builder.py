@@ -13,7 +13,7 @@ BASE_URL = os.path.join(BASE_PATH, 'templates')
 
 def generate_html(currency: str, invoice: Invoice, template):
     if not template:
-        template = get_template('index.html')
+        template = get_template('pdf_invoice.html')
 
     ctx = dict(
         invoice=invoice,
