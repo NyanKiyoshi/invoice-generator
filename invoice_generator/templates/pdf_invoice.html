@@ -3,7 +3,7 @@
 <html>
   <head>
     <title>
-      {% blocktrans with order_id=order.order_id %}Invoice {{ order_id}}{% endblocktrans %}
+      {% blocktrans with order_id=order.order_id %}Invoice {{ order_id }}{% endblocktrans %}
     </title>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -21,7 +21,9 @@
         content: "{{ vendor.address.name }}\a"
              "{{ vendor.address.street }}\a"
              "{{ vendor.address.postcode }} {{ vendor.address.city }}\a"
-             "{% trans "VAT Number:" %} {{ vendor.vat_number }}\a"
+             "{% blocktrans trimmed with vat_number=vendor.vat_number %}
+                VAT Number: {{ vat_number }}
+              {% endblocktrans %}\a"
              "\a\a"
       }
 
@@ -167,7 +169,7 @@
 
       {% if order.shipping_date_range %}
         <p>
-          {% blocktrans with from=order.shipping_from|date to=order.shipping_to|date %}
+          {% blocktrans trimmed with from=order.shipping_from|date to=order.shipping_to|date %}
           Order will be delivered between {{ from }} and {{ to }}.
           {% endblocktrans %}
         </p>
