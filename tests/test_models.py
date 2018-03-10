@@ -4,9 +4,9 @@ from tests.ModelsAssets import ModelsAssets
 
 
 class TestModels(unittest.TestCase, ModelsAssets):
-    def test_Vendor_additional_text_suffix(self):
+    def test_Vendor_bottom_padding(self):
         vendor = self.vendor  # type: models.Vendor
-        self.assertEqual(3 * '"\\a" ', vendor.additional_text_suffix)
+        self.assertEqual(3 * '\\a', vendor.bottom_padding)
 
     def test_Order_shipping_from(self):
         order = self.order()  # type: models.Order

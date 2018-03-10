@@ -5,6 +5,11 @@ from typing import Tuple
 BOTTOM_ROW_COUNT = 6
 
 
+def _get_column_bottom_padding(line_count: int):
+    res = BOTTOM_ROW_COUNT - line_count
+    return '\\a' * res
+
+
 class Address(object):
     __slots__ = ('name', 'street', 'postcode', 'city')
 
@@ -15,30 +20,21 @@ class Address(object):
         self.city = city
 
 
-class Executive(object):
-    __slots__ = ('name', 'text')
-
-    def __init__(self, name, text):
-        self.name = name
-        self.text = text
-
-
 class Vendor(object):
     __slots__ = ('executive', 'address', 'vat_number', 'additional_text')
 
     def __init__(
-            self, executive: Executive, address: Address,
+            self, executive_data: tuple, address: Address,
             vat_number: str, additional_text: tuple):
 
-        self.executive = executive
+        self.executive = executive_data
         self.address = address
         self.vat_number = vat_number
         self.additional_text = additional_text
 
     @property
-    def additional_text_suffix(self):
-        res = BOTTOM_ROW_COUNT - len(self.additional_text)
-        return '"\\a" ' * res
+    def bottom_padding(self):
+        return _get_column_bottom_padding(len(self.additional_text))
 
 
 class Order(object):
@@ -101,15 +97,20 @@ class OrderItem(object):
 
 
 class Invoice(object):
-    __slots__ = ('order', 'vendor', 'billing_address', 'items')
+    __slots__ = ('order', 'vendor', 'billing_address', 'items', 'additional_text')
 
     def __init__(self, order_data: Order,
                  vendor: Vendor, billing_address: Address,
-                 items: OrderItem):
+                 items: OrderItem, additional_text: str):
         self.order = order_data
         self.vendor = vendor
         self.billing_address = billing_address
         self.items = items
+        self.additional_text = additional_text
+
+    @property
+    def bottom_padding(self):
+        return _get_column_bottom_padding(len(self.additional_text))
 
 
 __all__ = ('Address', 'Vendor', 'Order', 'OrderItem', 'Invoice')

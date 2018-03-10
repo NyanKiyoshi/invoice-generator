@@ -39,9 +39,7 @@ class ModelsAssets:
 
     @property
     def executive(self):
-        executive = models.Executive(
-            'Ruth W. Blatt', 'RuthWBlatt@example.org')
-
+        executive = ('Ruth W. Blatt', 'RuthWBlatt@example.org')
         return executive
 
     @CachedProperty
@@ -69,7 +67,8 @@ class ModelsAssets:
             ('order_data', self.order),
             ('vendor', self.vendor),
             ('billing_address', self.address),
-            ('items', items)
+            ('items', items),
+            ('additional_text', ('An additional Text here...',))
         )
 
         for k, fn in defaults:

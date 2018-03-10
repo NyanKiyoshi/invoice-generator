@@ -59,31 +59,28 @@ class TestBuilder(TestUtils, ModelsAssets):
         # test if information about vendor are here
         self.assertStrippedMultiIn(
             (
-                'content: "Henry H. Rice" "\\a"',
-                '"159 Hornor Avenue" "\\a"',
-                '"74119 Tulsa, OK" "\\a"',
-                '"VAT Number: VT000112" "\\a"',
-                '"\\a" "\\a"',
-                '}'
+                r'content: "Henry H. Rice\a"',
+                r'"159 Hornor Avenue\a"',
+                r'"74119 Tulsa, OK\a"',
+                r'"VAT Number: VT000112\a"',
+                r'"\a\a"',
+                r'}'
             ), css)
 
         # test if additional information are here
         self.assertStrippedMultiIn(
             (
-                'content:  "Additional Information" "\\a" '
-                '"test + email" "\\a" "HenryHRice@example.org" "\\a"',
-
-                '"\\a" "\\a" "\\a"'
+                r'content: "Additional Information\a" '
+                r'"test + email\a" "HenryHRice@example.org\a"',
+                r'"\a\a\a"'
             ), css)
 
         # test if information about the executive are here
         self.assertStrippedMultiIn(
             (
-                'content: "Management Board" "\\a"',
-                '"Ruth W. Blatt" "\\a"',
-                '"RuthWBlatt@example.org" "\\a"',
-                '"\\a\\a\\a"',
-                '}',
+                r'content: "An additional Text here...\a"',
+                r'"\a\a\a\a\a"',
+                r'}',
             ), css)
 
     def test_render_invoice_info(self):

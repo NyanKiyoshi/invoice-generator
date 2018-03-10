@@ -21,7 +21,7 @@ setup(
     author_email='hello@vanille.bid',
     url='https://github.com/NyanKiyoshi/invoice-generator',
 
-    version='0.0.3rc0',
+    version='0.0.3rc1',
     name=PKG_NAME,
     packages=find_packages(exclude=['tests']),
     include_package_data=True,
