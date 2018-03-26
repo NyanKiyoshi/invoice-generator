@@ -39,7 +39,7 @@ class Vendor(object):
 
 class Order(object):
     __slots__ = (
-        'order_id', 'customer_id', 'date',
+        'order', 'order_id', 'customer_id', 'date',
         'pay_until_date', 'shipping_date_range',
         'tax_rate', 'total_discounted', 'total_shipping_net',
         'total_tax', 'total_net', 'total_gross'
@@ -49,7 +49,9 @@ class Order(object):
                  payment_date_limit,
                  shipping_date_range: Tuple[dt_date, dt_date],
                  tax_rate, total_discounted, total_shipping_net,
-                 total_tax, total_net, total_gross):
+                 total_tax, total_net, total_gross, order=None):
+
+        self.order = order
         self.order_id = invoice_id
         self.customer_id = customer_id
         self.date = date

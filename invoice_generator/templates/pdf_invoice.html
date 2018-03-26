@@ -77,9 +77,11 @@
     <div class="section">
       <table class="infoTable">
         <tr>
-          <td class="bold">
-            {% blocktrans with order_id=order.order_id %}Order ID: {{ order_id }}{% endblocktrans %}
-          </td>
+          {% if order.order_id %}
+            <td class="bold">
+              {% blocktrans with order_id=order.order_id %}Order ID: {{ order_id }}{% endblocktrans %}
+            </td>
+          {% endif %}
 
           <td>
             {% blocktrans with customer_id=order.customer_id %}Customer ID: {{ customer_id }}{% endblocktrans %}
