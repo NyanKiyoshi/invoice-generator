@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Invoice generator\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-26 17:19+0200\n"
+"POT-Creation-Date: 2018-03-26 17:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -48,38 +48,47 @@ msgid "Date of Invoice: %(date)s"
 msgstr "Rechnungsdatum: %(date)s"
 
 #: invoice_generator/templates/pdf_invoice.html:105
+msgctxt "Invoice table header - REF"
 msgid "REF"
 msgstr "#"
 
 #: invoice_generator/templates/pdf_invoice.html:106
+msgctxt "Invoice table header - Description"
 msgid "Description"
 msgstr "Beschreibung"
 
 #: invoice_generator/templates/pdf_invoice.html:107
+msgctxt "Invoice table header - Quantity"
 msgid "Quantity"
 msgstr "Anzahl"
 
 #: invoice_generator/templates/pdf_invoice.html:108
+msgctxt "Invoice table header - Price per Unit"
 msgid "Price per Unit"
 msgstr "Einzelpreis"
 
 #: invoice_generator/templates/pdf_invoice.html:109
+msgctxt "Invoice table header - Tax Rate"
 msgid "Tax Rate"
 msgstr "Steuersatz"
 
 #: invoice_generator/templates/pdf_invoice.html:110
+msgctxt "Invoice table header - Net Price"
 msgid "Net Price"
 msgstr "Netto"
 
 #: invoice_generator/templates/pdf_invoice.html:131
+msgctxt "invoice - Total discounted"
 msgid "Total discounted"
 msgstr "Gutscheine"
 
 #: invoice_generator/templates/pdf_invoice.html:139
+msgctxt "invoice - Shipping"
 msgid "Shipping"
 msgstr "Versand"
 
 #: invoice_generator/templates/pdf_invoice.html:146
+msgctxt "invoice - Net total"
 msgid "Net total"
 msgstr "Nettogesamt"
 
@@ -89,6 +98,7 @@ msgid "VAT (%(tax)s%%)"
 msgstr "Umsatzsteuer (%(tax)s%%)"
 
 #: invoice_generator/templates/pdf_invoice.html:158
+msgctxt "invoice - Gross total"
 msgid "Gross total"
 msgstr "Rechnungsbetrag"
 

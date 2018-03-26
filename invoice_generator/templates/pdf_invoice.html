@@ -89,7 +89,7 @@
         </tr>
         <tr>
           {% if order.shipping_date_range %}
-            <td class="small">{% blocktrans %}The order will be shipped upon receipt of payment.{% endblocktrans %}</td>
+            <td class="small">{% trans "The order will be shipped upon receipt of payment." %}</td>
           {% endif %}
           <td>
             {% blocktrans with date=order.date|date %}Date of Invoice: {{ date }}{% endblocktrans %}
@@ -102,12 +102,12 @@
       <table class="invoiceTable">
         <thead>
           <tr>
-            <td>{% blocktrans %}REF{% endblocktrans %}</td>
-            <td>{% blocktrans %}Description{% endblocktrans %}</td>
-            <td>{% blocktrans %}Quantity{% endblocktrans %}</td>
-            <td>{% blocktrans %}Price per Unit{% endblocktrans %}</td>
-            <td>{% blocktrans %}Tax Rate{% endblocktrans %}</td>
-            <td>{% blocktrans %}Net Price{% endblocktrans %}</td>
+            <td>{% trans "REF" context "Invoice table header - REF" %}</td>
+            <td>{% trans "Description" context "Invoice table header - Description" %}</td>
+            <td>{% trans "Quantity" context "Invoice table header - Quantity" %}</td>
+            <td>{% trans "Price per Unit" context "Invoice table header - Price per Unit" %}</td>
+            <td>{% trans "Tax Rate" context "Invoice table header - Tax Rate" %}</td>
+            <td>{% trans "Net Price" context "Invoice table header - Net Price" %}</td>
           </tr>
         </thead>
         <tbody>
@@ -128,7 +128,7 @@
           <tr class="tfoot">
             <td class="noborder"></td>
             <td class="noborder"></td>
-            <td colspan="3"> {% blocktrans %}Total discounted{% endblocktrans %}</td>
+            <td colspan="3"> {% trans "Total discounted" context "invoice - Total discounted" %}</td>
             <td class="nowrap" colspan="2">{{ order.total_discounted|floatformat:2 }} {{ currency }}</td>
           </tr>
           {% endif %}
@@ -136,14 +136,14 @@
           <tr class="tfoot">
             <td class="noborder"></td>
             <td class="noborder"></td>
-            <td colspan="3"> {% blocktrans %}Shipping{% endblocktrans %}</td>
+            <td colspan="3"> {% trans "Shipping" context "invoice - Shipping" %}</td>
             <td class="nowrap" colspan="2">{{ order.total_shipping_net|floatformat:2 }} {{ currency }}</td>
           </tr>
           {% endif %}
           <tr class="tfoot">
             <td class="noborder"></td>
             <td class="noborder"></td>
-            <td colspan="3"> {% blocktrans %}Net total{% endblocktrans %}</td>
+            <td colspan="3"> {% trans "Net total" context "invoice - Net total" %}</td>
             <td class="nowrap" colspan="2">{{ order.total_net|floatformat:2 }} {{ currency }}</td>
           </tr>
           <tr class="tfoot">
@@ -155,7 +155,7 @@
           <tr class="tfoot gross-total bold">
             <td class="noborder"></td>
             <td class="noborder"></td>
-            <td colspan="3"> {% blocktrans %}Gross total{% endblocktrans %}</td>
+            <td colspan="3"> {% trans "Gross total" context "invoice - Gross total" %}</td>
             <td class="nowrap" colspan="2">{{ order.total_gross|floatformat:2 }} {{ currency }}</td>
           </tr>
         </tbody>
@@ -163,7 +163,7 @@
     </div>
     
     <div class="section">
-      <p>{% blocktrans %}Thank you for your order.{% endblocktrans %}</p>
+      <p>{% trans "Thank you for your order." %}</p>
 
       {% if order.pay_until_date %}
         <p>{% blocktrans with date=order.pay_until_date|date %}Please settle the payment by {{ date }}{% endblocktrans %}.</p>
