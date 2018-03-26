@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-10 02:34+0100\n"
+"POT-Creation-Date: 2018-03-26 17:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,80 +31,80 @@ msgstr ""
 msgid "\"Page \" counter(page) \" of \" counter(pages)"
 msgstr ""
 
-#: invoice_generator/templates/pdf_invoice.html:81
+#: invoice_generator/templates/pdf_invoice.html:82
 #, python-format
-msgid "Order ID: %(order_id)s"
+msgid "Invoice ID: %(order_id)s"
 msgstr ""
 
-#: invoice_generator/templates/pdf_invoice.html:85
+#: invoice_generator/templates/pdf_invoice.html:87
 #, python-format
 msgid "Customer ID: %(customer_id)s"
 msgstr ""
 
-#: invoice_generator/templates/pdf_invoice.html:90
+#: invoice_generator/templates/pdf_invoice.html:92
 msgid "The order will be shipped upon receipt of payment."
 msgstr ""
 
-#: invoice_generator/templates/pdf_invoice.html:93
+#: invoice_generator/templates/pdf_invoice.html:95
 #, python-format
 msgid "Date of Invoice: %(date)s"
 msgstr ""
 
-#: invoice_generator/templates/pdf_invoice.html:103
+#: invoice_generator/templates/pdf_invoice.html:105
 msgid "REF"
 msgstr ""
 
-#: invoice_generator/templates/pdf_invoice.html:104
+#: invoice_generator/templates/pdf_invoice.html:106
 msgid "Description"
 msgstr ""
 
-#: invoice_generator/templates/pdf_invoice.html:105
+#: invoice_generator/templates/pdf_invoice.html:107
 msgid "Quantity"
 msgstr ""
 
-#: invoice_generator/templates/pdf_invoice.html:106
+#: invoice_generator/templates/pdf_invoice.html:108
 msgid "Price per Unit"
 msgstr ""
 
-#: invoice_generator/templates/pdf_invoice.html:107
+#: invoice_generator/templates/pdf_invoice.html:109
 msgid "Tax Rate"
 msgstr ""
 
-#: invoice_generator/templates/pdf_invoice.html:108
+#: invoice_generator/templates/pdf_invoice.html:110
 msgid "Net Price"
 msgstr ""
 
-#: invoice_generator/templates/pdf_invoice.html:129
+#: invoice_generator/templates/pdf_invoice.html:131
 msgid "Total discounted"
 msgstr ""
 
-#: invoice_generator/templates/pdf_invoice.html:137
+#: invoice_generator/templates/pdf_invoice.html:139
 msgid "Shipping"
 msgstr ""
 
-#: invoice_generator/templates/pdf_invoice.html:144
+#: invoice_generator/templates/pdf_invoice.html:146
 msgid "Net total"
 msgstr ""
 
-#: invoice_generator/templates/pdf_invoice.html:150
+#: invoice_generator/templates/pdf_invoice.html:152
 #, python-format
 msgid "VAT (%(tax)s%%)"
 msgstr ""
 
-#: invoice_generator/templates/pdf_invoice.html:156
+#: invoice_generator/templates/pdf_invoice.html:158
 msgid "Gross total"
 msgstr ""
 
-#: invoice_generator/templates/pdf_invoice.html:164
+#: invoice_generator/templates/pdf_invoice.html:166
 msgid "Thank you for your order."
 msgstr ""
 
-#: invoice_generator/templates/pdf_invoice.html:167
+#: invoice_generator/templates/pdf_invoice.html:169
 #, python-format
 msgid "Please settle the payment by %(date)s"
 msgstr ""
 
-#: invoice_generator/templates/pdf_invoice.html:174
+#: invoice_generator/templates/pdf_invoice.html:176
 #, python-format
 msgid "Order will be delivered between %(from)s and %(to)s."
 msgstr ""

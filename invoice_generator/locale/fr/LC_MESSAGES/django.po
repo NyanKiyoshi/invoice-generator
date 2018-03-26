@@ -1,23 +1,28 @@
-
+# Translations template for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Invoice generator\n"
+"Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-10 02:34+0100\n"
+"POT-Creation-Date: 2018-03-26 17:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: fr\n"
-"Language-Team: fr <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"Last-Translator: NyаnKiyoshi <hello@vanille.bid>, 2018\n"
+"Language-Team: French (https://www.transifex.com/vanillebid/teams/83741/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.3\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: invoice_generator/templates/pdf_invoice.html:6
 #, python-format
 msgid "Invoice %(order_id)s"
-msgstr "Bon de commande %(order_id)s"
+msgstr "Facture %(order_id)s"
 
 #: invoice_generator/templates/pdf_invoice.html:26
 #, python-format
@@ -28,80 +33,80 @@ msgstr "Numéro de TVA : %(vat_number)s"
 msgid "\"Page \" counter(page) \" of \" counter(pages)"
 msgstr "\"Page \" counter(page) \" sur \" counter(pages)"
 
-#: invoice_generator/templates/pdf_invoice.html:81
+#: invoice_generator/templates/pdf_invoice.html:82
 #, python-format
-msgid "Order ID: %(order_id)s"
-msgstr "Numéro de commande : %(order_id)s"
+msgid "Invoice ID: %(order_id)s"
+msgstr "Facture numéro : %(order_id)s"
 
-#: invoice_generator/templates/pdf_invoice.html:85
+#: invoice_generator/templates/pdf_invoice.html:87
 #, python-format
 msgid "Customer ID: %(customer_id)s"
 msgstr "Numéro de client : %(customer_id)s"
 
-#: invoice_generator/templates/pdf_invoice.html:90
+#: invoice_generator/templates/pdf_invoice.html:92
 msgid "The order will be shipped upon receipt of payment."
 msgstr "Votre commande sera expédiée à la réception du paiement."
 
-#: invoice_generator/templates/pdf_invoice.html:93
+#: invoice_generator/templates/pdf_invoice.html:95
 #, python-format
 msgid "Date of Invoice: %(date)s"
 msgstr "Date de facturation : %(date)s"
 
-#: invoice_generator/templates/pdf_invoice.html:103
+#: invoice_generator/templates/pdf_invoice.html:105
 msgid "REF"
 msgstr "RÉF"
 
-#: invoice_generator/templates/pdf_invoice.html:104
+#: invoice_generator/templates/pdf_invoice.html:106
 msgid "Description"
 msgstr "Description"
 
-#: invoice_generator/templates/pdf_invoice.html:105
+#: invoice_generator/templates/pdf_invoice.html:107
 msgid "Quantity"
 msgstr "Quantité"
 
-#: invoice_generator/templates/pdf_invoice.html:106
+#: invoice_generator/templates/pdf_invoice.html:108
 msgid "Price per Unit"
 msgstr "Prix unitaire"
 
-#: invoice_generator/templates/pdf_invoice.html:107
+#: invoice_generator/templates/pdf_invoice.html:109
 msgid "Tax Rate"
 msgstr "TVA"
 
-#: invoice_generator/templates/pdf_invoice.html:108
+#: invoice_generator/templates/pdf_invoice.html:110
 msgid "Net Price"
 msgstr "Prix (HT)"
 
-#: invoice_generator/templates/pdf_invoice.html:129
+#: invoice_generator/templates/pdf_invoice.html:131
 msgid "Total discounted"
 msgstr "Réductions"
 
-#: invoice_generator/templates/pdf_invoice.html:137
+#: invoice_generator/templates/pdf_invoice.html:139
 msgid "Shipping"
 msgstr "Livraison"
 
-#: invoice_generator/templates/pdf_invoice.html:144
+#: invoice_generator/templates/pdf_invoice.html:146
 msgid "Net total"
 msgstr "Total (HT)"
 
-#: invoice_generator/templates/pdf_invoice.html:150
+#: invoice_generator/templates/pdf_invoice.html:152
 #, python-format
 msgid "VAT (%(tax)s%%)"
 msgstr "TVA (%(tax)s%%)"
 
-#: invoice_generator/templates/pdf_invoice.html:156
+#: invoice_generator/templates/pdf_invoice.html:158
 msgid "Gross total"
 msgstr "Total (TTC)"
 
-#: invoice_generator/templates/pdf_invoice.html:164
+#: invoice_generator/templates/pdf_invoice.html:166
 msgid "Thank you for your order."
 msgstr "Merci pour votre commande."
 
-#: invoice_generator/templates/pdf_invoice.html:167
+#: invoice_generator/templates/pdf_invoice.html:169
 #, python-format
 msgid "Please settle the payment by %(date)s"
 msgstr "Merci de régler votre commande avant le %(date)s"
 
-#: invoice_generator/templates/pdf_invoice.html:174
+#: invoice_generator/templates/pdf_invoice.html:176
 #, python-format
 msgid "Order will be delivered between %(from)s and %(to)s."
 msgstr "Votre commande sera livrée entre le %(from)s et le %(to)s."
